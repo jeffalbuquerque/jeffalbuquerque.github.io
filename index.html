@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Animações com o Jeff</title>
+
+    <style>
+        body{
+          height: 100vh;
+          margin: 0;
+          padding: 0;
+        }
+      .box{
+        /* width: 100vw;
+        height: 100vh;
+        border: solid 1px #000; */
+        /* position: relative;
+        animation: move 1s ease-in-out;
+        transition: background-color 2s;
+        display: block;
+        background-color: #fff; */
+        /* box-shadow: 0px 0px 10px #333; */
+        /* display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box; */
+      }
+
+      /* .box:hover{
+        background-color: yellow;
+      } */
+
+      h1{
+        /* color: white; */
+        /* animation: texto 900ms ease-in-out forwards 1s; */
+        /* position: absolute;
+        opacity: 0;
+        left: 80px */
+        margin: 0;
+        font-size: 1.4em;
+        color: white;
+        font-family: sans-serif;
+      }
+
+      /* @keyframes  move{
+        0% {
+          transform: translateX(4000px);
+        }
+
+        100% {
+          transform: translateX(0px);
+        }
+      }
+
+      @keyframes texto {
+          0%{
+            transform: translatey(-100px);
+          }
+
+          80%{
+            transform: translatey(200px);
+          }
+
+          100%{
+            transform: translatey(100px);
+            opacity: 1;
+          }
+      } */
+      menu{
+        width: 30px;
+        margin: 0 10px 0 0;
+      }
+      menu:hover{
+        cursor: pointer;
+        opacity: .4;
+      }
+      menu span{
+        display: block;
+        width: 30px;
+        height: 5px;
+        background: white;
+        margin: 0 0 3px 0;
+      }
+      ul{
+        width: 240px;
+        padding: 0;
+        margin: -20px 0 0 -20px;
+        transform: translateX(-300px);
+        transition: all .25s linear;
+        position: absolute;
+        top: 17px;
+        background: white;
+        height: 100vh;
+        -webkit-box-shadow: 1px 0px 6px 0px rgba(50, 50, 50, 0.36);
+        -moz-box-shadow:    1px 0px 6px 0px rgba(50, 50, 50, 0.36);
+        box-shadow:         1px 0px 6px 0px rgba(50, 50, 50, 0.36);
+        background-color: #2d2f33;
+      }
+      ul a{
+        text-decoration: none;
+        font-size: 1em;
+        display: block;
+        margin: 0 0 10px 0;
+        padding: 10px;
+        font-family: sans-serif;
+        color: white;
+      }
+      ul a:hover{
+        color: white;
+        background: black;
+        opacity: .4;
+      }
+      ul.active{
+        transform: translateX(0);
+        transition: all .25s linear;
+      }
+      li:first-child{
+        margin: 50px 0 0 0;
+      }
+      li{
+        list-style: none;
+      }
+      span.close{
+        position: absolute;
+        right: 10px;
+        top: 21px;
+        display: block;
+      }
+      span.close img{
+      -webkit-filter: invert(100%);
+         -moz-filter: invert(100%);
+          -ms-filter: invert(100%);
+      filter: invert(100%);
+      }
+      span.close:hover{
+        cursor: pointer;
+      }
+      header{
+        background: RoyalBlue;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        height: 10vh;
+        box-sizing: border-box;
+      }
+      main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 90vh;
+      }
+      main img{
+        width: 500px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <menu class="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </menu>
+      <ul class="list">
+        <li><a href="">Big Mac</a></li>
+        <li><a href="">Quarterão</a></li>
+        <li><a href="">Cheddar McMelt</a></li>
+        <li><a href="">Mc Lanche Feliz :)</a></li>
+        <li><a href="">Big Tasty</a></li>
+        <span class="close" href="">
+          <img src="images/close.png" alt="Botão fechar">
+        </span>
+      </ul>
+      <h1>Menu Sandwich</h1>
+    </header>
+    <main>
+      <img src="images/hamburger.svg" alt="">
+    </main>
+    <script type="text/javascript">
+      displayMenu('.button');
+      displayMenu('.close');
+
+      function displayMenu(e) {
+        $(e).click(function() {
+          $('.list').toggleClass('active');
+        });
+      }
+
+      $('main').click(function() {
+        if ($('.list').hasClass('active')) {
+          $('.list').toggleClass('active');
+        }
+      });
+    </script>
+  </body>
+</html>
