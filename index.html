@@ -5,75 +5,49 @@
     <title>Animações com o Jeff</title>
 
     <style>
-        body{
-          height: 100vh;
-          margin: 0;
-          padding: 0;
-        }
-      .box{
-        /* width: 100vw;
+      body{
         height: 100vh;
-        border: solid 1px #000; */
-        /* position: relative;
-        animation: move 1s ease-in-out;
-        transition: background-color 2s;
-        display: block;
-        background-color: #fff; */
-        /* box-shadow: 0px 0px 10px #333; */
-        /* display: flex;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box; */
+        margin: 0;
+        padding: 0;
       }
 
-      /* .box:hover{
-        background-color: yellow;
-      } */
+      header{
+        background: RoyalBlue;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        height: 10vh;
+        box-sizing: border-box;
+      }
+
+      main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 90vh;
+      }
+      main img{
+        width: 500px;
+      }
 
       h1{
-        /* color: white; */
-        /* animation: texto 900ms ease-in-out forwards 1s; */
-        /* position: absolute;
-        opacity: 0;
-        left: 80px */
         margin: 0;
         font-size: 1.4em;
         color: white;
         font-family: sans-serif;
       }
 
-      /* @keyframes  move{
-        0% {
-          transform: translateX(4000px);
-        }
-
-        100% {
-          transform: translateX(0px);
-        }
-      }
-
-      @keyframes texto {
-          0%{
-            transform: translatey(-100px);
-          }
-
-          80%{
-            transform: translatey(200px);
-          }
-
-          100%{
-            transform: translatey(100px);
-            opacity: 1;
-          }
-      } */
       menu{
         width: 30px;
         margin: 0 10px 0 0;
       }
+
       menu:hover{
         cursor: pointer;
         opacity: .4;
       }
+
       menu span{
         display: block;
         width: 30px;
@@ -81,6 +55,7 @@
         background: white;
         margin: 0 0 3px 0;
       }
+
       ul{
         width: 240px;
         padding: 0;
@@ -96,6 +71,7 @@
         box-shadow:         1px 0px 6px 0px rgba(50, 50, 50, 0.36);
         background-color: #2d2f33;
       }
+
       ul a{
         text-decoration: none;
         font-size: 1em;
@@ -105,53 +81,42 @@
         font-family: sans-serif;
         color: white;
       }
+
       ul a:hover{
         color: white;
         background: black;
         opacity: .4;
       }
+
       ul.active{
         transform: translateX(0);
         transition: all .25s linear;
       }
+
       li:first-child{
         margin: 50px 0 0 0;
       }
+
       li{
         list-style: none;
       }
+
       span.close{
         position: absolute;
         right: 10px;
         top: 21px;
         display: block;
       }
+
       span.close img{
       -webkit-filter: invert(100%);
          -moz-filter: invert(100%);
           -ms-filter: invert(100%);
       filter: invert(100%);
       }
+
       span.close:hover{
         cursor: pointer;
-      }
-      header{
-        background: RoyalBlue;
-        display: flex;
-        flex-direction: row;
-        padding: 20px;
-        height: 10vh;
-        box-sizing: border-box;
-      }
-      main{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: 90vh;
-      }
-      main img{
-        width: 500px;
       }
     </style>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
